@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\SceneControls.cs" />
     <Compile Include="Assets\Scripts\Teleportation.cs" />
     <Compile Include="Assets\Scripts\WanderingAI.cs" />
+    <Compile Include="Assets\Terrain\Teleport.cs" />
     <Compile Include="Assets\WeaponChange.cs" />
     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
