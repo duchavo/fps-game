@@ -33,6 +33,7 @@ public class FirstPersonController : MonoBehaviour {
 
     CharacterController cc;
     Camera c;
+    Camera gunCamera;
 
     SceneControls scene;
 
@@ -63,6 +64,9 @@ public class FirstPersonController : MonoBehaviour {
             .GetComponent<Camera>();
         rayShooter = gameObject.GetComponentInChildren<RayShooter>();
 
+        gunCamera = GameObject.FindGameObjectWithTag("GunCamera")
+            .GetComponent<Camera>();
+
         scene = GameObject.FindGameObjectWithTag("Respawn").GetComponent<SceneControls>();
 
         weapons[0] = (GameObject)Instantiate(weapon0, holdingPoint, Quaternion.identity);
@@ -73,9 +77,15 @@ public class FirstPersonController : MonoBehaviour {
         weapons[1].SetActive(false);
         weapons[2].SetActive(false);
 
-        weapons[0].transform.parent = c.transform;
-        weapons[1].transform.parent = c.transform;
-        weapons[2].transform.parent = c.transform;
+        gunCamera.transform.parent = c.transform;
+
+        weapons[0].transform.parent = gunCamera.transform;
+        weapons[1].transform.parent = gunCamera.transform;
+        weapons[2].transform.parent = gunCamera.transform;
+
+        MoveToLayer(weapons[0].transform, LayerMask.NameToLayer("GunLayer"));
+        MoveToLayer(weapons[1].transform, LayerMask.NameToLayer("GunLayer"));
+        MoveToLayer(weapons[2].transform, LayerMask.NameToLayer("GunLayer"));
 
         bulletHoles[0] = bulletHole0;
         bulletHoles[1] = bulletHole1;
@@ -151,5 +161,12 @@ public class FirstPersonController : MonoBehaviour {
     public void SetCamRelativeY(float relY)
     {
         camRelativeY = relY;
+    }
+
+    void MoveToLayer(Transform root, int layer)
+    {
+        root.gameObject.layer = layer;
+        foreach (Transform child in root)
+            MoveToLayer(child, layer);
     }
 }
