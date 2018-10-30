@@ -27,10 +27,13 @@ public class FirstPersonController : MonoBehaviour {
     public float gravity = -9.81f;
     public float jumpSpeed = 5f;
 
+    private float camRelativeY = 0;
+
     float verticalVelocity = 0;
 
     CharacterController cc;
     Camera c;
+    Camera gunCamera;
 
     SceneControls scene;
 
@@ -61,6 +64,9 @@ public class FirstPersonController : MonoBehaviour {
             .GetComponent<Camera>();
         rayShooter = gameObject.GetComponentInChildren<RayShooter>();
 
+        gunCamera = GameObject.FindGameObjectWithTag("GunCamera")
+            .GetComponent<Camera>();
+
         scene = GameObject.FindGameObjectWithTag("Respawn").GetComponent<SceneControls>();
 
         weapons[0] = (GameObject)Instantiate(weapon0, holdingPoint, Quaternion.identity);
@@ -71,9 +77,15 @@ public class FirstPersonController : MonoBehaviour {
         weapons[1].SetActive(false);
         weapons[2].SetActive(false);
 
-        weapons[0].transform.parent = c.transform;
-        weapons[1].transform.parent = c.transform;
-        weapons[2].transform.parent = c.transform;
+        gunCamera.transform.parent = c.transform;
+
+        weapons[0].transform.parent = gunCamera.transform;
+        weapons[1].transform.parent = gunCamera.transform;
+        weapons[2].transform.parent = gunCamera.transform;
+
+        MoveToLayer(weapons[0].transform, LayerMask.NameToLayer("GunLayer"));
+        MoveToLayer(weapons[1].transform, LayerMask.NameToLayer("GunLayer"));
+        MoveToLayer(weapons[2].transform, LayerMask.NameToLayer("GunLayer"));
 
         bulletHoles[0] = bulletHole0;
         bulletHoles[1] = bulletHole1;
@@ -144,5 +156,17 @@ public class FirstPersonController : MonoBehaviour {
     void setBulletHole(GameObject bulletHole)
     {
         rayShooter.setBulletHole(bulletHole);
+    }
+
+    public void SetCamRelativeY(float relY)
+    {
+        camRelativeY = relY;
+    }
+
+    void MoveToLayer(Transform root, int layer)
+    {
+        root.gameObject.layer = layer;
+        foreach (Transform child in root)
+            MoveToLayer(child, layer);
     }
 }

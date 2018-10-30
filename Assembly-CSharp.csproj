@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CrouchController.cs" />
     <Compile Include="Assets\EasyWeaponsAssets\Easy Weapons\Scripts\BombFragment.cs" />
     <Compile Include="Assets\EasyWeaponsAssets\Easy Weapons\Scripts\BulletHole.cs" />
     <Compile Include="Assets\EasyWeaponsAssets\Easy Weapons\Scripts\BulletHolePool.cs" />
