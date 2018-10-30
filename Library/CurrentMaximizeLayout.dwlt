@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 805
+  controlID: 3736
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 742
+  controlID: 3737
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -179,19 +179,19 @@ MonoBehaviour:
     height: 354
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 249.9981755211096
+  lastFramingTime: 1427.0423764371262
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -28.798927, y: 12.979152, z: 30.613089}
+    m_Target: {x: 20.926414, y: 11.933174, z: 93.368454}
     speed: 2
-    m_Value: {x: -28.798927, y: 12.979152, z: 30.613089}
-  m_RenderMode: 32
+    m_Value: {x: 20.926414, y: 11.933174, z: 93.368454}
+  m_RenderMode: 0
   m_CameraMode:
-    drawMode: 32
-    name: UV Overlap
-    section: Baked Global Illumination
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
   m_ValidateTrueMetals: 0
   m_SceneViewState:
     showFog: 1
@@ -214,13 +214,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.21793695, y: 0.511705, z: -0.13602942, w: 0.8198522}
+    m_Target: {x: -0.0087055, y: 0.9911732, z: -0.08527058, w: -0.101138204}
     speed: 2
-    m_Value: {x: 0.21793696, y: 0.511705, z: -0.13602944, w: 0.81985223}
+    m_Value: {x: -0.008705499, y: 0.99117315, z: -0.08527058, w: -0.101138204}
   m_Size:
-    m_Target: 139.59743
+    m_Target: 73.02818
     speed: 2
-    m_Value: 139.59743
+    m_Value: 73.02818
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 775
+  controlID: 3651
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -332,10 +332,10 @@ MonoBehaviour:
     height: 370
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 2319}
-    m_SelectedIDs: 28220000
-    m_LastClickedID: 8744
-    m_ExpandedIDs: 96b1ffff98b1ffffe6fbffff0000000028220000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 0c060000
+    m_LastClickedID: 0
+    m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -422,21 +422,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Terrain
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Terrain
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\TamDu\Desktop\CalStateLA\Fall\3D Programming\Homework
     1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 34}
-    m_SelectedIDs: 06200000
-    m_LastClickedID: 8198
-    m_ExpandedIDs: 00000000760b0000020c000058120000f0130000f0160000d4480000d648000000ca9a3b
+    scrollPos: {x: 0, y: 86}
+    m_SelectedIDs: d6110000
+    m_LastClickedID: 4566
+    m_ExpandedIDs: 00000000780b0000040c00005a120000f2130000f2160000d6510000d851000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -464,7 +464,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000020c000058120000f0130000f0160000d4480000d648000000ca9a3b
+    m_ExpandedIDs: 00000000780b0000040c00005a120000f2130000f2160000d6510000d851000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -489,9 +489,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 28220000
-    m_LastClickedInstanceID: 8744
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 0c060000
+    m_LastClickedInstanceID: 1548
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

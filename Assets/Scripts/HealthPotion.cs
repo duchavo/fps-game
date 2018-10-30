@@ -22,6 +22,11 @@ public class HealthPotion : MonoBehaviour {
         {
             Destroy(gameObject);
             pc._health += healthAmt;
+            if (pc._health > 10)
+            {
+                pc._health = 10;
+            }
+            Debug.Log(pc._health);
         }
     }
 }

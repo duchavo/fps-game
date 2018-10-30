@@ -11,6 +11,7 @@ public class Enemy1 : MonoBehaviour
     public float speed = 3.0f;
     public float obstacleRange = 5.0f;
     public float detectionRange = 1.0f;
+    //static Animator animator;
 
     public float shootInterval = 50.0f;
     float dT = 0;
@@ -26,6 +27,7 @@ public class Enemy1 : MonoBehaviour
     {
         _alive = true;
         scene = GameObject.FindGameObjectWithTag("Respawn").GetComponent<SceneControls>();
+        //animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,12 +43,15 @@ public class Enemy1 : MonoBehaviour
 
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Vector3 delta = player.transform.position - transform.position;
+            delta.y = 0;
             if(delta.magnitude < detectionRange)
             {
                 transform.LookAt(player.transform);
+                Debug.Log("hALLA");
             }
             transform.Translate(0, 0, speed * Time.deltaTime);
-
+            //animator.SetBool("isRunning", false);
+            //animator.SetBool("isShooting", false);
             Ray ray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
             if (Physics.SphereCast(ray, 0.75f, out hit))
@@ -61,6 +66,7 @@ public class Enemy1 : MonoBehaviour
                         _fireball.transform.rotation = transform.rotation;
                         _fireball.transform.position += new Vector3(0, 1, 0);
                         dT = 0;
+                        //animator.SetBool("isShooting", true);
                         Debug.Log("Halla");
                     }
                 }

@@ -42,6 +42,7 @@ public class Enemy2 : MonoBehaviour
 
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Vector3 delta = player.transform.position - transform.position;
+            delta.y = 0;
             if (delta.magnitude < detectionRange)
             {
                 transform.LookAt(player.transform);

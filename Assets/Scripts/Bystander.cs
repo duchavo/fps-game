@@ -31,6 +31,7 @@ public class Bystander : MonoBehaviour
             if (hitObject.GetComponent<PlayerCharacter>())
             {
                 Vector3 moveDir = transform.position - hitObject.transform.position;
+                moveDir.y = 0;
                 transform.Translate(moveDir.normalized * speed * Time.deltaTime);
             }
             if (hit.distance < obstacleRange)

@@ -16,7 +16,6 @@ public class PlayerCharacter : MonoBehaviour {
 
 	public void Hurt(int damage) {
 		_health -= damage;
-        Debug.Log(damage + " " + _health);
         if(_health <= 0)
         {
             die();
