@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{611D810F-7634-8DDF-3356-E7962F955376}</ProjectGuid>
+    <ProjectGuid>{43C013D6-070D-2B37-0C33-AA1771A9DBED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CrouchController.cs" />
     <Compile Include="Assets\EasyWeaponsAssets\Easy Weapons\Scripts\BombFragment.cs" />
     <Compile Include="Assets\EasyWeaponsAssets\Easy Weapons\Scripts\BulletHole.cs" />
     <Compile Include="Assets\EasyWeaponsAssets\Easy Weapons\Scripts\BulletHolePool.cs" />
@@ -114,16 +115,16 @@
     <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -324,25 +325,25 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/TamDu/Desktop/CalStateLA/Fall/3D Programming/Homework 1/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
+      <HintPath>C:/Users/lisas/Documents/GitHub/fps-game/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/TamDu/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/lisas/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/TamDu/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/lisas/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
@@ -374,7 +375,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{C2906FC3-3A90-B988-A43E-3266D4C90399}</Project>
+      <Project>{51F656D3-4C7C-BE93-7942-358610FB56E4}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

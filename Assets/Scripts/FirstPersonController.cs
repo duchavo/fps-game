@@ -27,6 +27,8 @@ public class FirstPersonController : MonoBehaviour {
     public float gravity = -9.81f;
     public float jumpSpeed = 5f;
 
+    private float camRelativeY = 0;
+
     float verticalVelocity = 0;
 
     CharacterController cc;
@@ -144,5 +146,10 @@ public class FirstPersonController : MonoBehaviour {
     void setBulletHole(GameObject bulletHole)
     {
         rayShooter.setBulletHole(bulletHole);
+    }
+
+    public void SetCamRelativeY(float relY)
+    {
+        camRelativeY = relY;
     }
 }
